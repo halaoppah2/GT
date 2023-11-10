@@ -1,0 +1,63 @@
+body{
+    background: orangered!important;
+}
+
+.navbar-brand img{
+    width: 60px;
+    outline: 2px solid orange;
+}
+
+.navbar-nav, .nav-items{
+   font-size: 14pt;
+   margin-left: 70px; 
+}
+
+a{
+    margin: 10px;
+}
+
+.navbar-brand:hover{
+    background: none;
+}
+
+.active1,a:hover{
+    background: orangered;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    transition: all 0.6s;
+}
+
+.img1{
+    margin-left: 50px;
+    border-radius: 5px;
+}
+
+.about{
+    margin-right: 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 787px){
+    .active1,a:hover{
+        background: none
+    }
+
+    .navbar-nav, .nav-items{
+        font-size: 12pt;
+        margin-left: 0; 
+     }
+
+     .carousel-caption{
+        position: absolute;
+        font-size: 10px;
+        top: 8px;
+     }
+
+}

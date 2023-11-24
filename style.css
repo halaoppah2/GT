@@ -9,7 +9,7 @@ body{
 
 .navbar-nav, .nav-items{
    font-size: 14pt;
-   margin-left: 70px; 
+   margin-left: 40px; 
 }
 
 a{
@@ -27,6 +27,16 @@ a{
     font-weight: bold;
     padding: 5px;
     transition: all 0.6s;
+}
+
+.tm{
+    margin-left: 15px;
+    font-size: 8pt;
+    font-weight: bold;
+    color: white;
+    background: orangered;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 .img1{

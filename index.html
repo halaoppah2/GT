@@ -40,6 +40,7 @@
                         <button class="btn btn-primary" type="button">Go</button>
                     </div>
                 </form>
+                <span id="time" class="tm"></span>
             </div>
             </div>
         </nav>
@@ -211,10 +212,24 @@
         </div>
     </div>
 
-    <footer><small>&copy;2023, All right reserved</small></footer>
+    <footer><small>&copy;<span id="year"></span>, All right reserved</small></footer>
 
 
     </div>
+
+    <script>
+        let date = new Date();
+        year = date.getFullYear();
+        document.getElementById('year').innerHTML = year;
+
+    function updateTime(){
+        let time = new Date();
+        document.getElementById('time').innerHTML = time.toUTCString();
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    </script>
     
 </body>
 </html>

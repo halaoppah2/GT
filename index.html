@@ -165,14 +165,14 @@
                     <span>Send us a message</span>
                 </div>
 
-                <form action="#">
+                <form action="#" onsubmit="validateForm()" name="myForm">
                     <div class="form-floating  mb-3">
-                        <input type="text" class="form-control form-control-sm" placeholder="Name" style="width: 250px; height: 50px;">
+                        <input type="text" class="form-control form-control-sm" placeholder="Name" style="width: 250px; height: 50px;" name="form">
                         <label for="name">Name</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="text" class="form-control form-control-sm" placeholder="Email" style="width: 250px; height: 50px;">
+                        <input type="text" class="form-control form-control-sm" placeholder="Email" style="width: 250px; height: 50px;" name="form">
                         <label for="email">Email</label>
                     </div>
 
@@ -223,12 +223,22 @@
         year = date.getFullYear();
         document.getElementById('year').innerHTML = year;
 
+    setInterval(updateTime, 1000);
+    
     function updateTime(){
         let time = new Date();
         document.getElementById('time').innerHTML = time.toUTCString();
     }
-    setInterval(updateTime, 1000);
-    updateTime();
+    
+
+    function validateForm(){
+        let valid = document.forms["myForm"]["form"].value;
+        
+        if (valid == ""){
+            alert('Fields must be filled! Thank you.');
+            return false;
+        }   
+    }
 
     </script>
     
